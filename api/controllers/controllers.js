@@ -47,13 +47,15 @@ function cepGetById(req, res) {
     console.log("Endereço " + url)
 
     axios.get(url)
-        .then((response) => response.json())
-        .then(data => {
-            dados = data;
-            res.json({ mensage: dados })
-        })
-
-        .then(response => console.log(dados))
+        .then((response) => console.log(response.data))
+        // .then(data => {
+            // dados = data;
+            // res.json({ mensage: dados })
+        // })
+        // .catch(function(error){
+        //     console.log("Erro na ")
+        // })
+        // .then(response => console.log(dados))
 
         .catch(function (error) {
             console.log("Erro de requisição");
@@ -76,6 +78,8 @@ function livrosGetById(req, res) {
     console.timeEnd(leitura)
     console.log("===Livros=============")
 }
+
+
 function frasesGetById(req, res) {
     const frases = req.params.frasesid
     console.log("Parametro esperado: " + frases);
@@ -83,8 +87,9 @@ function frasesGetById(req, res) {
     const url = `https://api.kanye.rest`
     console.log("Frases Kanye " + url)
 
-    fetch(url)
-        .then((response) => response.json())
+    // fetch(url)
+    axios.get(url)
+        .then((response) => console.log(response.data))
         .then(data => {
             dados = data;
             res.json({ mensage: dados })

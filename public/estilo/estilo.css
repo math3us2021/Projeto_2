@@ -1,0 +1,50 @@
+html,
+body {
+    height: 100vh; /* VIWERPORT */
+    width: 100vw;
+}
+
+
+header {
+    background-color: aqua;
+    height: 15vh;
+    border: 1px solid black;
+}
+
+#corpo {
+    background-color: darkgray;
+    height: 75vh;
+    text-align: center;
+    border: 0px solid black;
+}
+
+footer {
+    background-color: greenyellow;
+    height: 10vh;
+    border: 1px solid black;
+}
+
+/*
+ Configurações css do menu principal de opções
+*/
+.menuPrincipal{
+    float: left;
+    font-size: 21px;
+    padding-left: 2vw;
+    transition: 0.2s;
+}
+
+.menuPrincipal ul li {
+    display: inline;
+    padding-left: 2vw;
+}
+
+.menuPrincipal ul li a{
+    color: blue;
+}
+
+.menuPrincipal ul li a:hover{
+    color: red;
+    font-size: 21px;
+    text-decoration: none;
+}
